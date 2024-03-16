@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title> Calculadora Online </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Patricio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="initial">
+        <header>
+            <p id="title"> Calculadora Online </p>
+        </header>
+
+        <div class="carrossel">
+            <div class="imagens">
+                <input class="carr" type="radio" name="imagem" id="imagem1" checked>
+                <input class="carr" type="radio" name="imagem" id="imagem2">
+                <input class="carr" type="radio" name="imagem" id="imagem3">
+                <input class="carr" type="radio" name="imagem" id="imagem4">
+
+                <div class="imagem i1">
+                    <img src="image/Adicao.png">
+                </div>
+                <div class="imagem">
+                    <img src="image/Subtracao.png">
+                </div>
+                <div class="imagem">
+                    <img src="image/Multiplicacao.png">
+                </div>
+                <div class="imagem">
+                    <img src="image/Divisao.png">
+                </div>
+            </div>
+
+            <div class="navigation">    
+                <label class="bar" for="imagem1"></label>
+                <label class="bar" for="imagem2"></label>
+                <label class="bar" for="imagem3"></label>
+                <label class="bar" for="imagem4"></label>
+            </div>
+        </div>
+
+        <div class="adicao content" id="imagem1">
+            <div class="conteudo">
+                <p class="titles">Adição</p> <br>
+
+                <p class="texts">Digite o primeiro número:</p>
+                <input type="text" id="number1" />
+
+                <br> <br>
+
+                <p class="texts">Digite o segundo número:</p>
+                <input type="text" id="number2" />
+
+                <br> <br> <br>
+
+                <button onclick="adicao()"> <p class="texts" id="calcular"> Calcular </p> </button>
+
+                <br> <br>
+
+                <p class="texts" id="result"></p>
+
+                <br>
+            </div>
+        </div>
+
+
+        <div class="adicao content" id="imagem2">
+            <div class="conteudo">
+                <p class="titles">Subtração</p> <br>
+
+                <p class="texts">Digite o primeiro número:</p>
+                <input type="text" id="number1s" />
+
+                <br> <br>
+
+                <p class="texts">Digite o segundo número:</p>
+                <input type="text" id="number2s" />
+
+                <br> <br> <br>
+
+                <button onclick="subtracao()"> <p id="calcular" class="texts"> Calcular </p> </button>
+
+                <br> <br>
+
+                <p id="results" class="texts"></p>
+
+                <br>
+            </div>
+        </div>
+
+
+        <div class="adicao content" id="imagem2">
+            <div class="conteudo">
+                <p class="titles">Multiplicação</p> <br>
+
+                <p class="texts">Digite o primeiro número:</p>
+                <input type="text" id="number1m" />
+
+                <br> <br>
+
+                <p class="texts">Digite o segundo número:</p>
+                <input type="text" id="number2m" />
+
+                <br> <br> <br>
+
+                <button onclick="multiplicacao()"> <p id="calcular" class="texts"> Calcular </p> </button>
+
+                <br> <br>
+
+                <p id="resultm" class="texts"></p>
+
+                <br>
+            </div>
+        </div>
+
+
+        <div class="adicao content" id="imagem2">
+            <div class="conteudo">
+                <p class="titles">Divisão</p> <br> 
+
+                <p class="texts">Digite o primeiro número:</p>
+                <input type="text" id="number1d" />
+
+                <br> <br>
+
+                <p class="texts">Digite o segundo número:</p>
+                <input type="text" id="number2d" />
+
+                <br> <br> <br>
+
+                <button onclick="divisao()"> <p id="calcular" class="texts"> Calcular </p> </button>
+
+                <br> <br>
+
+                <p id="resultd" class="texts"></p>
+
+                <br>
+            </div>
+        </div>
+
+
+        <div class="usefor">
+            <div id="contando">Você ainda não fez nenhum <br> cálculo.</div>
+        </div>
+
+
+        <footer id="foot">
+            <p> Trabalho acadêmico - Sem fins lucrativos </p>
+            <p> Gabriel Patricio 2024 - &copy Todos os direitos reservados </p>
+        </footer>
+
+    </main>
+</body>
+</html>
+
+<script>
+    function adicao() {
+        var n1 = parseFloat(document.getElementById("number1").value);
+        var n2 = parseFloat(document.getElementById("number2").value);
+        var result = parseFloat(document.getElementById("result").value);
+
+        if (n1 > 0 || n2 >= 0 ) {
+            result = n1 + n2;
+
+            document.getElementById("result").innerText = "O resultado da soma foi: " + result;
+            document.getElementById("number1").value = "";
+            document.getElementById("number2").value = "";
+        }
+    }
+
+
+
+    function subtracao() {
+        var s1 = parseFloat(document.getElementById("number1s").value);
+        var s2 = parseFloat(document.getElementById("number2s").value);
+        var results = parseFloat(document.getElementById("results").value);
+
+        if (s1 > 0 || s2 >= 0 ) {
+            results = s1 - s2;
+
+            document.getElementById("results").innerText = "O resultado da subtração foi: " + results;
+            document.getElementById("number1s").value = "";
+            document.getElementById("number2s").value = "";
+        }
+    }
+
+
+
+    function multiplicacao() {
+        var m1 = parseFloat(document.getElementById("number1m").value);
+        var m2 = parseFloat(document.getElementById("number2m").value);
+        var resultm = parseFloat(document.getElementById("resultm").value);
+
+        if (m1 > 0 || m2 >= 0 ) {
+            resultm = m1 * m2;
+
+            document.getElementById("resultm").innerText = "O resultado da multiplicação foi: " + resultm;
+            document.getElementById("number1m").value = "";
+            document.getElementById("number2m").value = "";
+        }
+    }
+
+
+
+    function divisao() {
+        var d1 = parseFloat(document.getElementById("number1d").value);
+        var d2 = parseFloat(document.getElementById("number2d").value);
+        var resultd = parseFloat(document.getElementById("resultd").value);
+
+        if (d1 > 0 || d2 >= 0 ) {
+            resultd = d1 / d2;
+
+            document.getElementById("resultd").innerText = "O resultado da divisão foi: " + resultd;
+            document.getElementById("number1d").value = "";
+            document.getElementById("number2d").value = "";
+        }
+    }
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const labels = document.querySelectorAll("label");
+        const contents= document.querySelectorAll(".content");
+
+        labels.forEach(function(label, index)
+        {
+            label.addEventListener("click", function() {
+                contents.forEach(function(content)
+                {
+                    content.style.display = "none";
+                });
+                contents[index].style.display = "block";
+            });
+        });
+    });
+
+    let contador = 0;
+
+    function contarCliques() {
+        contador++;
+        document.getElementById("contando").innerText = "Você já fez " + contador + " cálculos.";
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll("button");
+
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", contarCliques);
+        }
+    });
+</script>

@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Atlantic';
+    src: url('fonts/Atlantic Bentley.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pieces';
+    src: url('fonts/Pieces of Eight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spidro';
+    src: url('fonts/SpidroMarley-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hey';
+    src: url('fonts/Hey Comic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Barber';
+    src: url('fonts/Barbershop in Thailand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Belgiano';
+    src: url('fonts/Belgiano Serif 2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cabinest';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/calibri-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,700&family=Inter:wght@400;500&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+.initial{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(72deg, #3DEBB0 1%, #8956F3 99%);
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    height: 13vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 70%);
+    box-shadow: 0px 3px 10px #464646;
+    font-family: 'Calibri';
+}
+
+#title{
+    color: white;
+    font-family: 'Barber';
+    font-size: 55px;
+    position: relative;
+    text-align: center;
+    top: 7%;
+    text-shadow: 2px 2px 2px black;
+}
+
+.carrossel{
+    height: 380px;
+    width: 800px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 24.5%;
+    transform: translate(-10%);
+    display: flex;
+}
+
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    background-color: white;
+    transition: .4s;
+}
+
+.carr {
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.imagem{
+    width: 20%;
+    transition: .6s;
+}
+
+.imagem img{
+    width: auto;
+    height: auto;
+}
+
+#imagem1:checked ~ .i1{
+    margin-left: 0;
+} 
+
+#imagem2:checked ~ .i1{
+    margin-left: -20%;
+}
+
+#imagem3:checked ~ .i1{
+    margin-left: -40%;
+}
+
+#imagem4:checked ~ .i1{
+    margin-left: -60%;
+}
+
+.adicao{
+    width: 17%;
+    height: auto;
+    background-color: #dbdbdb;
+    border: 2px solid rgb(141, 141, 141);
+    border-radius: 6px;
+    position: relative;
+    top: 10%;
+    left: 65%;
+}
+
+.texts{
+    font-family: 'Calibri';
+    font-size: 15px;
+}
+
+.titles{
+    font-family: 'Hey';
+    font-size: 22px;
+    position: relative;
+}
+
+.content{
+    display: none;
+}
+
+.conteudo{
+    position: relative;
+    margin: 19px 19px 19px 19px; 
+    left: 10px;
+}
+
+.conteudo input{
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.conteudo button{
+    width: 91%;
+    border-radius: 6px;
+    border: 2px solid rgb(38, 0, 100);
+}
+
+#calcular{
+    font-family: 'Calibri';
+    font-size: 13px;
+    text-decoration: underline;
+    font-style: italic;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.conteudo #titles{
+    font-size: 14px;
+}
+
+.usefor{
+    width: 17%;
+    height: 8%;
+    background-color: #dbdbdb;
+    border: 2px solid rgb(141, 141, 141);
+    border-radius: 6px;
+    position: absolute;
+    top: 76%;
+    left: 65%;
+}
+
+#contando{
+    margin: 5px 5px 5px 23px;
+    font-family: 'Calibri';
+    font-size: 15px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0%;
+    height: 9vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 90%);
+    opacity: 75%;
+}
+
+footer p{
+    color: white;
+    font-family: 'Calibri';
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    top: 33%;
+}
+
+/* Fim Da Codificação Página Inicial */
